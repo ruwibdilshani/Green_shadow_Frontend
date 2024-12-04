@@ -23,7 +23,7 @@ $(".register-btn").click(function () {
         localStorage.setItem("userEmail", email);
         console.log(`User email saved: ${email}`);
 
-        window.location.href = "/SignIn.html";
+        window.location.href = "/pages/SignIn.html";
       })
       .catch((error) => {
         console.error(error);
