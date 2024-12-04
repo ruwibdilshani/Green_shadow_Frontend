@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Staff Management System</title>
+    <link rel="icon" href="/assests/img/new%20logo.png" type="image/png" />
+    <link rel="stylesheet" href="/assests/css/pages/staff.css" />
+    <link rel="stylesheet" href="/assests/css/animation/animation.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+<div class="container mt-3" >
+    <h2 class="mb-4">Staff Management</h2>
+    <hr />
+
+    <!-- Search and Add Button Section -->
+    <div class="d-flex justify-content-between align-items-center my-3">
+        <input type="text" class="form-control w-50" placeholder="Search Staff" id="searchInput" />
+        <button class="btn btn-success" onclick="showAddStaffModal()">Add Staff</button>
+    </div>
+
+    <!-- Modal for Adding/Editing Staff -->
+    <div class="modal fade" id="addStaffModal" tabindex="-1" aria-labelledby="addStaffModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addStaffModalLabel">Add/Edit Staff</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addStaffForm">
+                        <div class="row">
+                            <!-- Column 1 -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="staffId" class="form-label">Staff ID</label>
+                                    <input type="text" class="form-control" id="staffId" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="designation" class="form-label">Designation</label>
+                                    <input type="text" class="form-control" id="designation" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="gender" class="form-label">Gender</label>
+                                    <select class="form-select" id="gender" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="joinedDate" class="form-label">Joined Date</label>
+                                    <input type="date" class="form-control" id="joinedDate" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dob" class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dob" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactNo" class="form-label">Contact No.</label>
+                                    <input type="text" class="form-control" id="contactNo" required>
+                                </div>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="addressLine1" class="form-label">Address Line 1</label>
+                                    <input type="text" class="form-control" id="addressLine1" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="addressLine2" class="form-label">Address Line 2</label>
+                                    <input type="text" class="form-control" id="addressLine2">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="addressLine3" class="form-label">Address Line 3</label>
+                                    <input type="text" class="form-control" id="addressLine3">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="addressLine4" class="form-label">Address Line 4</label>
+                                    <input type="text" class="form-control" id="addressLine4">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="addressLine5" class="form-label">Postal Code</label>
+                                    <input type="text" class="form-control" id="addressLine5">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="role" class="form-label">Role</label>
+                                    <select class="form-select" id="role" required>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Manager">Manager</option>
+                                        <option value="Field Staff">Field Staff</option>
+                                        <option value="Driver">Driver</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fields" class="form-label">Allocated Fields</label>
+                                    <input type="text" class="form-control" id="fields">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="vehicles" class="form-label">Allocated Vehicles</label>
+                                    <input type="text" class="form-control" id="vehicles">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Buttons -->
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn btn-warning me-2">Save</button>
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Table to Display Staff Details -->
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th>Select</th>
+            <th>Staff ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Designation</th>
+            <th>Gender</th>
+            <th>Joined Date</th>
+            <th>DOB</th>
+            <th>Address</th>
+            <th>Contact No.</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Allocated Fields</th>
+            <th>Allocated Vehicles</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="staffTableBody">
+        <!-- Staff rows will be added here -->
+        </tbody>
+    </table>
+
+</div>
+
+<script src="../controller/staff.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

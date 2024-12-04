@@ -1,0 +1,61 @@
+/* Base Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h2 {
+    color: #333;
+}
+
+/* Table Styles */
+.table-container {
+    margin-top: 10px;
+}
+
+.table {
+    width: 100%;
+    /*border-collapse: collapse;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.thead-dark tr th{
+    background-color: #b1bbb6;
+    border-color: #ffffff;
+}
+.thead-dark {
+    background-color: #72BF78; /* Dark green for table header */
+    /*color: white;*/
+}
+
+/* Apply styles to the table body to set it in the background */
+#staffTableBody {
+    background-color: rgb(190, 225, 194) !important; /* Light, semi-transparent background */
+    border-radius: 8px;
+}
+
+/* Styling for table rows */
+#staffTableBody tr {
+    background-color: rgb(255, 234, 106);
+}
+
+#staffTableBody tr:hover {
+    background-color: rgba(220, 220, 220, 0.7);
+}
+
+/* Cell padding and text alignment */
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #6e7780;
+}
