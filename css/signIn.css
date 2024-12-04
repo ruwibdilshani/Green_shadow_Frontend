@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #006769 50%, #40a578 50%);
+  color: #333;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Form Container */
+.header-title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: start;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #2b2a2a;
+  /* /shadow/ */
+  text-shadow: 2px 2px 4px #0000001a;
+}
+.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  padding: 0%;
+}
+.form-container {
+  background-color: #89ba8b9f;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Larger form width */
+  width: 100%;
+}
+
+.form-container h3 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2b2a2a;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+.form-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Image Styling */
+.text-center {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 30px;
+}
+
+.text-center img {
+  width: 60rem;
+  object-fit: cover;
+}
+.btn {
+  background-color: #17611d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0e4613;
+}
