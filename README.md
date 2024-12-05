@@ -54,7 +54,8 @@ Here are the core technologies used in the frontend:
 
 Follow these steps to set up the project locally:
 
----API Postman document [https://documenter.getpostman.com/view/35385633/2sAYBbcoCh]
+---
+## API Postman document [https://documenter.getpostman.com/view/35385633/2sAYBbcoCh]
 
 ### ✅ **Prerequisites**
 - 🌐 A modern web browser
